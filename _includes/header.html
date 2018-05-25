@@ -1,0 +1,8 @@
+<header class="header">
+        <a class="header-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+    {% for page in site.pages %}
+        <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+        
+    {% endfor %}
+</header>
