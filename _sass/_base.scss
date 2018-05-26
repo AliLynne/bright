@@ -24,3 +24,12 @@ a {
   text-decoration: none;
 }
 
+.header {
+  background-image: url(../headerbg.jpg);
+  background-size: cover;
+  height: 90vh;
+  &__headshot {
+    height: 20rem;
+    border-radius: 100px;
+  }
+}

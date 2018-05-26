@@ -1,6 +1,6 @@
 <header class="header">
         <a class="header-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-
+        <img class="header__headshot" src="{{ site.headshot}}" />
     {% for page in site.pages %}
         <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
         
