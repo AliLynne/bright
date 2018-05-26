@@ -42,3 +42,6 @@ plugins:
  - jekyll-feed
 
 livereload: true
+
+sass:
+  sass_dir: _sass
