@@ -18,18 +18,39 @@ html {
 body {
   box-sizing: border-box;
   font-family: 'Cutive Mono', monospace;
+  font-size: $default-font-size;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .header {
-  background-image: url(../headerbg.jpg);
+  display: flex;
+  color: $white;
+  background-color: $primary-color;
+
+    &__list {
+      display: flex;
+    }
+}
+
+.hero {
+  height: 80vh;
+  background-image: 
+                    linear-gradient(to right bottom, rgba($primary-color, 0.7), rgba($primary-color-light, 0.7)),
+                    url(../hero.jpg);
   background-size: cover;
-  height: 90vh;
-  &__headshot {
-    height: 20rem;
-    border-radius: 100px;
-  }
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+    &__headline {
+      font-size: 4.5rem;
+      color: $white;
+      max-width: 70%;
+      text-align: center;
+    }
 }
