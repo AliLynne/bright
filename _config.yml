@@ -2,9 +2,9 @@
 title: AliLynne
 author: Ali Thompson
 email: alilynne.thompson@gmail.com
+headshot: assets/me.jpg
 description: > # this means to ignore newlines until "twitter_username:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. 
+  I have a passion for creating websites that are accessible to all. 
 # social links
 twitter_username: alilynnet
 github_username:  alilynne
@@ -26,7 +26,7 @@ googleplus_username: +jekyll
 #   instance: example.com
 
 
-show_excerpts: false # set to true to show excerpts on the homepage
+show_excerpts: true # set to true to show excerpts on the homepage
 
 # Bright date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this

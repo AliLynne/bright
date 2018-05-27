@@ -1,8 +1,16 @@
 <header class="header">
-        <a class="header-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
-    {% for page in site.pages %}
-        <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+    <a class="header__title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+    <nav class="header__nav">
+        <ul class="header__list">
+            {% for page in site.pages %}
+            {% if page.title %}
+                <li class="header__item"><a href="{{ page.url }}">{{ page.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
         
-    {% endfor %}
+    </nav>  
+
 </header>
