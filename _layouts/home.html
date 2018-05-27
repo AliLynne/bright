@@ -6,24 +6,4 @@ layout: default
 <div class="hero">
     <h1 class="hero__headline">{{ site.description }}</h1>
 </div>
-<div class="posts">
-    {%- if site.posts.size > 0 -%}
-        <h2 class="posts__headline">{{page.list_title | default: "Posts"}}</h2>
-        <ul class="posts__list">
-            {%- for post in site.posts -%}
-            <li class="posts__item">
-                
-                    {%- assign date_format = site.bright.date_format | default: "%b %-d, %Y" -%}
-                    <span class="posts__date">{{ post.date | date: date_format}}</span>
-                    <h3 class="posts__title">
-                        <a class="posts__link" href="{{ post.url | relative_url }}">
-                            {{ post.title | escape }}
-                        </a>
-                    </h3>
-                    {{ post.content | strip_html | truncate:60 }}
-               
-            </li>
-            {%- endfor -%}
-        </ul>
-    {%- endif -%}
-</div>
+{%- include posts.html -%}
