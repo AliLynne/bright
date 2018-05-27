@@ -17,7 +17,8 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: 'Cutive Mono', monospace;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   font-size: $default-font-size;
 }
 
@@ -27,19 +28,34 @@ a {
 }
 
 .header {
+  height: 6rem;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: $white;
   background-color: $primary-color;
 
+    &__title {
+      margin-left: 1.5rem;
+      font-size: 3.5rem;
+    }
+
     &__list {
       display: flex;
+      justify-content: space-between;
+      list-style: none;
+      font-weight: 300;
+    }
+
+    &__item {
+      margin-right: 1.5rem;
     }
 }
 
 .hero {
   height: 80vh;
   background-image: 
-                    linear-gradient(to right bottom, rgba($primary-color, 0.7), rgba($primary-color-light, 0.7)),
+                    linear-gradient(to right bottom, rgba($primary-color, 0.8), rgba($primary-color-light, 0.8)),
                     url(../hero.jpg);
   background-size: cover;
   background-position: center;
@@ -48,9 +64,44 @@ a {
   justify-content: center;
 
     &__headline {
-      font-size: 4.5rem;
+      font-size: 5.5rem;
+      font-weight: 300;
       color: $white;
       max-width: 70%;
       text-align: center;
     }
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__headline {
+
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+  &__item {
+    width: 80%;
+    &:not(:last-child) {
+      // This is a good place to use grid instead. 
+    }
+  }
+
+  &__date {
+
+  }
+
+  &__title {
+
+  }
+
+  &__link {
+
+  }
 }
