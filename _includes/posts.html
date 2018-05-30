@@ -2,7 +2,7 @@
   {%- if site.posts.size > 0 -%}
       <h2 class="posts__headline">{{page.list_title | default: "Posts"}}</h2>
       <ul class="posts__list">
-          {%- for post in site.posts -%}
+          {%- for post in paginator.posts -%}
           <li class="posts__item">
               
                   {%- assign date_format = site.bright.date_format | default: "%b %-d, %Y" -%}
@@ -23,4 +23,16 @@
           {%- endfor -%}
       </ul>
   {%- endif -%}
+  {% if paginator.total_pages > 1 %}
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+    {% else %}
+      <span>&laquo; Prev</span>
+    {% endif %}
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
+  {% endif %}  
 </div>

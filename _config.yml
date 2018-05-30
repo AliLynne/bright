@@ -40,6 +40,7 @@ bright:
 
 plugins:
  - jekyll-feed
+ - jekyll-paginate
 
 livereload: true
 
@@ -47,3 +48,6 @@ sass:
   sass_dir: _sass
 
 permalink: /:year/:month/:day/:title 
+
+paginate: 8
+paginate_path: /page:num/
