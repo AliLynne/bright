@@ -73,22 +73,28 @@ a {
 }
 
 .posts {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   
 
   &__headline {
-    
+    color: $primary-color-dark;
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
+    list-style: none;
+    padding-left: 0;
   }
 
   &__item {
-    
-
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0 0 .5rem rgba($color-grey-dark-2, .5);
     
   }
 
@@ -101,7 +107,8 @@ a {
   }
 
   &__title {
-    
+    text-align: center;
+    color: $primary-color-dark;
   }
 
   &__link {
