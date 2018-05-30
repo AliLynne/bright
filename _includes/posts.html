@@ -6,13 +6,18 @@
           <li class="posts__item">
               
                   {%- assign date_format = site.bright.date_format | default: "%b %-d, %Y" -%}
+                  <div class="posts__title-box">
+                      <h3 class="posts__title">
+                          <a class="posts__link" href="{{ post.url | relative_url }}">
+                              {{ post.title | escape }}
+                          </a>
+                      </h3>
+                  </div>
+                  
                   <span class="posts__date">{{ post.date | date: date_format}}</span>
-                  <h3 class="posts__title">
-                      <a class="posts__link" href="{{ post.url | relative_url }}">
-                          {{ post.title | escape }}
-                      </a>
-                  </h3>
-                  {{ post.content | strip_html | truncate:60 }}
+                  <p class="posts__content">
+                    {{ post.content | strip_html | truncate:150 }}
+                  </p>
              
           </li>
           {%- endfor -%}

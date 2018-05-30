@@ -32,7 +32,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: $white;
+  color: $color-white;
   background-color: $primary-color;
 
     &__title {
@@ -66,7 +66,7 @@ a {
     &__headline {
       font-size: 5.5rem;
       font-weight: 300;
-      color: $white;
+      color: $color-white;
       max-width: 70%;
       text-align: center;
     }
@@ -76,32 +76,70 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  &__headline {
+  flex-wrap: wrap;
+  
 
+  &__headline {
+    font-size: 3.5rem;
+    color: $primary-color-dark;
   }
 
   &__list {
     display: flex;
     justify-content: space-around;
     list-style: none;
+    padding: 0;
+    margin-right: 4rem;
+    margin-left: 4rem;
   }
 
   &__item {
     width: 80%;
+    box-shadow: 0 0 1rem $color-grey-dark-2;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 35rem;
+    
     &:not(:last-child) {
-      // This is a good place to use grid instead. 
+      margin-right: 4rem;
     }
+
+    
   }
 
   &__date {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
 
+  &__title-box {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
   }
 
   &__title {
-
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: $color-white;
+    margin-top: 0;
+    margin-bottom: 0;
+    
   }
 
   &__link {
+    
+  }
 
+  &__content {
+    display: block;
+    margin: 1rem 2rem;
+    font-size: 1.7rem;
   }
 }
