@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to make a jekyll theme"
+title: "How to make a jekyll theme with lots of words in the title"
 ---
 
 ### Notes

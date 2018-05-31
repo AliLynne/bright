@@ -1,8 +1,25 @@
-<ul>
-  {% for proj in site.data.projects %}
-  <li>
-    {{ proj.title }}
-  </li>
-  {% endfor %}
-</ul>
+<div class="projects">
+    <h2 class="projects__headline">{{page.list_title | default: "Projects"}}</h2>
+  <ul class="projects__list">
+    {% for proj in site.data.projects %}
+    <li class="projects__item">
+      <h3 class="projects__title">
+          <a class="projects__link" href="{{ proj.link }}">
+            {{ proj.title | escape }}
+          </a>
+      </h3>
+      {% if proj.image %}
+        <img class="projects__image" src="assets/{{ proj.image }}" />
+      {% endif %}
+      <p class="projects__content">
+          {{ proj.summary }}
+      </p>
+      {% if proj.code %}
+        <a href="{{ proj.code }}">Code</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+  
 

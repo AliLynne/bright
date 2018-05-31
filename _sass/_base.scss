@@ -54,6 +54,7 @@ a {
 
 .hero {
   height: 80vh;
+  max-height: 50rem;
   background-image: 
                     linear-gradient(to right bottom, rgba($primary-color, 0.8), rgba($primary-color-light, 0.8)),
                     url(../hero.jpg);
@@ -72,7 +73,8 @@ a {
     }
 }
 
-.posts {
+.posts,
+.projects {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,6 +82,7 @@ a {
   
 
   &__headline {
+    margin-top: 2rem;
     color: $primary-color-dark;
   }
 
@@ -89,10 +92,14 @@ a {
     grid-template-rows: 1fr 1fr;
     list-style: none;
     padding-left: 0;
+    margin-top: 0;
   }
 
   &__item {
-    padding: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    padding-top: .5rem;
     margin: 1rem;
     box-shadow: 0 0 .5rem rgba($color-grey-dark-2, .5);
     
@@ -117,5 +124,9 @@ a {
 
   &__content {
     
+  }
+
+  &__image {
+    height: 12rem;
   }
 }

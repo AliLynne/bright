@@ -1,11 +1,14 @@
 
--  title: I'm Project Title One
-   link: www.example.com
-   summary: I'm a short description of a project explaining the very basics.
+-  title: RadAI Website
+   link: https://www.radai.com
+   summary: Website for an Artificial Intelligence company focusing on radiology.
+   image: radai.png
 
--  title: I'm Project Title Two
-   link: www.example.com/project2
+-  title: Bright Jekyll Theme
+   link: https://alilynne.github.io
    summary: I'm a short description of a project explaining the very basics.
+   image: bright.png
+   code: https://github.com/AliLynne/bright
 
 -  title: I'm Project Title Three
    link: www.example.com/project3
